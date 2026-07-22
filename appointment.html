@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment | Sanjeevani Multispecialty Hospital</title>
+<meta name="description" content="Book an appointment online at Sanjeevani Hospital.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230A2E52%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22%231FA97C%22 text-anchor=%22middle%22 font-family=%22Arial%22>+</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="mailto:care@sanjeevanihospital.in"><i class="fa-solid fa-envelope"></i> care@sanjeevanihospital.in</a>
+      <a href="contact.html"><i class="fa-solid fa-location-dot"></i> 142, Avinashi Road, Coimbatore</a>
+      <span><i class="fa-solid fa-clock"></i> OPD: Mon–Sat, 8 AM – 8 PM</span>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:1066"><i class="fa-solid fa-phone"></i> Emergency: 1066</a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>
+      <span>Sanjeevani Hospital<small>Multispecialty &amp; Trauma Care</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="departments.html">Departments</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="services.html">Services</a>
+      <a href="packages.html">Health Packages</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Health Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="emergency.html" class="btn btn-emergency btn-sm"><i class="fa-solid fa-truck-medical"></i> Emergency</a>
+      <a href="appointment.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-calendar-check"></i> <span>Book Appointment</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Appointment</div>
+    <div class="eyebrow">Book online</div>
+    <h1>Book an appointment</h1>
+    <p style="color:#dcebf7;max-width:560px;">Fill in the form below — our team will call to confirm your slot within the hour.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.4fr .9fr;gap:32px;align-items:flex-start;">
+      <div class="form-card">
+        <div class="form-success" id="appointmentSuccess"><i class="fa-solid fa-circle-check" style="font-size:20px;"></i> Thank you — your request has been received. We'll call you shortly to confirm.</div>
+        <form id="appointmentForm" novalidate>
+          <div class="form-row">
+            <div class="field"><label>Patient Name <span class="req">*</span></label><input type="text" name="name" required placeholder="Full name"></div>
+            <div class="field"><label>Age <span class="req">*</span></label><input type="number" name="age" min="0" max="120" required placeholder="Age in years"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Gender <span class="req">*</span></label>
+              <select name="gender" required>
+                <option value="">Select gender</option>
+                <option>Male</option><option>Female</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label>Phone Number <span class="req">*</span></label><input type="tel" name="phone" required pattern="[0-9+ ]{7,15}" placeholder="+91 90000 00000"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@example.com"></div>
+            <div class="field"><label>Department <span class="req">*</span></label>
+              <select name="department" id="apDept" required>
+                <option value="">Select department</option>
+                <option value="general">General Medicine</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="gynecology">Gynecology</option>
+                <option value="dermatology">Dermatology</option>
+                <option value="dentistry">Dentistry</option>
+                <option value="ent">ENT</option>
+                <option value="ophthalmology">Ophthalmology</option>
+                <option value="urology">Urology</option>
+                <option value="physiotherapy">Physiotherapy</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Preferred Doctor</label>
+              <select name="doctor" id="apDoctor"><option value="">Select department first</option></select>
+            </div>
+            <div class="field"><label>Preferred Date <span class="req">*</span></label><input type="date" name="date" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Preferred Time <span class="req">*</span></label>
+              <select name="time" required>
+                <option value="">Select time slot</option>
+                <option>9:00 AM – 11:00 AM</option>
+                <option>11:00 AM – 1:00 PM</option>
+                <option>2:00 PM – 4:00 PM</option>
+                <option>4:00 PM – 6:00 PM</option>
+              </select>
+            </div>
+            <div class="field"><label>Existing Patient?</label>
+              <select name="existing"><option>No</option><option>Yes</option></select>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="field"><label>Symptoms / Reason for Visit</label><textarea name="symptoms" placeholder="Briefly describe what's bothering you"></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-calendar-check"></i> Submit Appointment Request</button>
+          <p class="form-note">This is a static demo form — no data is transmitted or stored. Connect it to your booking system to go live.</p>
+        </form>
+      </div>
+
+      <div>
+        <div class="contact-info-card" style="margin-bottom:20px;">
+          <h3>Prefer to call?</h3>
+          <div class="contact-item"><span class="ic"><i class="fa-solid fa-phone"></i></span><div><h5>Appointment Desk</h5><p>+91 422 456 7890</p></div></div>
+          <div class="contact-item"><span class="ic"><i class="fa-solid fa-truck-medical"></i></span><div><h5>Emergency</h5><p>1066 / 100 (24×7)</p></div></div>
+          <div class="contact-item"><span class="ic"><i class="fa-solid fa-clock"></i></span><div><h5>OPD Hours</h5><p>Mon–Sat, 8 AM–8 PM</p></div></div>
+        </div>
+        <div class="why-card">
+          <span class="ic"><i class="fa-solid fa-circle-info"></i></span>
+          <h4>What happens next?</h4>
+          <p>Our appointment desk calls within the hour to confirm your doctor and time slot. You'll also get an SMS reminder a day before your visit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-staff-snake"></i></span>
+          <span>Sanjeevani Hospital</span>
+        </a>
+        <p>A 220-bed multispecialty hospital in Coimbatore delivering advanced, compassionate care across 13 departments, 24×7.</p>
+        <div class="footer-emg">
+          <div style="font-family:var(--ff-data);font-size:12px;color:#c9f4e4;">24×7 Emergency</div>
+          <div class="num"><i class="fa-solid fa-phone"></i> 1066 / 100</div>
+        </div>
+        <div class="social-row">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="doctors.html">Our Doctors</a></li>
+          <li><a href="packages.html">Health Packages</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Departments</h5>
+        <ul>
+          <li><a href="departments.html">Cardiology</a></li>
+          <li><a href="departments.html">Neurology</a></li>
+          <li><a href="departments.html">Orthopedics</a></li>
+          <li><a href="departments.html">Pediatrics</a></li>
+          <li><a href="departments.html">Gynecology</a></li>
+          <li><a href="departments.html">View All →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Details</h5>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> 142, Avinashi Road, Coimbatore, TN 641018</li>
+          <li><i class="fa-solid fa-phone"></i> +91 422 456 7890</li>
+          <li><i class="fa-solid fa-envelope"></i> care@sanjeevanihospital.in</li>
+          <li><i class="fa-solid fa-clock"></i> OPD: Mon–Sat, 8 AM–8 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="cur-year">2026</span> Sanjeevani Multispecialty Hospital. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a> · <a href="contact.html">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-stack">
+  <a href="tel:1066" class="float-btn float-call" aria-label="Emergency call"><i class="fa-solid fa-phone"></i></a>
+  <a href="https://wa.me/914224567890" class="float-btn float-wa" aria-label="Chat on WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+  <button class="float-btn float-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
+
+<script src="./script.js"></script>
+</body></html>
